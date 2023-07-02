@@ -1,1 +1,23 @@
-
+spring:
+  datasource:
+    username: ${USERNAME}
+    password: ${PASSWORD}
+    url: ${URL}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    database: mysql
+    generate-ddl: true
+  redis:
+    port: ${REDIS_PORT}
+    host: ${REDIS_HOST}
+server:
+  port: 8080
+jwt:
+  access: ${ACC_EXP}
+  refresh: ${REF_EXP}
+  secret: ${SECRET}
+  prefix: ${PREFIX}
+  header: ${HEADER}

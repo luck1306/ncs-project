@@ -1,2 +1,11 @@
-package com.example.ncsproject.global.error;public class ErrorResponse {
+package com.example.ncsproject.global.error;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+
+@Getter
+@AllArgsConstructor
+public class ErrorResponse {
+    private final String message;
+    private final int code;
 }
